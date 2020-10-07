@@ -13,7 +13,7 @@ import java.util.List;
 
 public class DistribuidorDAO {
 
-            private Connection con;
+        private Connection con;
         
         //Conecta com o Banco , com o parâmentro passado pela MAIN
         public DistribuidorDAO(Connection con){
