@@ -2,7 +2,7 @@ create database lojaProjeto;
 
 use lojaProjeto;
 
-
+select * from itens_venda;
 create table cliente(
 	id_cliente integer not null primary key auto_increment,
     nome varchar(50),
@@ -48,10 +48,11 @@ create table produto(
     estoque int,
     constraint fk_distribuidores foreign key (id_dist) references distribuidores(id_dist)
 );
-
+		
 -- Inserindo distribuidores
 insert into distribuidores(nome_fantasia,razao_social,telefone,email) values ("distribuidor do alemão","Alemão safado LTDA","984557365","alemao@safado");
 insert into distribuidores(nome_fantasia,razao_social,telefone,email) values ("distribuidor do Seu Tiao","tiao berranteiro LTDA","987410365","tiao@berrante");
+
 
 -- Inserindo Produtos
 insert into produto(id_dist,preco_venda,descricao,data_validade,preco_custo,estoque) values (1,5.30,"Maionese hell","2022-10-20",10.50,12);

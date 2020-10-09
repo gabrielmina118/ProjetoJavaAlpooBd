@@ -25,32 +25,32 @@ package Classes;
         }
         
 
-    public String getNome_fantasia() {
-        return nome_fantasia;
-    }
+        public String getNome_fantasia() {
+            return nome_fantasia;
+        }
 
-    public String getRazao_social() {
-        return razao_social;
-    }
+        public String getRazao_social() {
+            return razao_social;
+        }
 
-    public String getTelefone() {
-        return telefone;
-    }
+        public String getTelefone() {
+            return telefone;
+        }
 
-    public String getEmail() {
-        return email;
-    }
+        public String getEmail() {
+            return email;
+        }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+        public void setId(Integer id) {
+            this.id = id;
+        }
 
-    @Override
-    public String toString() {
-        return String.format("O distribuidor é: %d - %s - %s - %s ",
-                                    this.id,this.nome_fantasia,this.razao_social,this.telefone,this.email);
-    }
+        @Override
+        public String toString() {
+            return String.format("O distribuidor é: %d - %s - %s - %s ",
+                                        this.id,this.nome_fantasia,this.razao_social,this.telefone,this.email);
+        }
 
-    
-    
+
+
 }

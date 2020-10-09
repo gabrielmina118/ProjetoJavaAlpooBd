@@ -1,7 +1,6 @@
 package DAO;
 
 import BancoDados.ConectaBanco;
-import Classes.Distribuidor;
 import Classes.Produto;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -73,16 +72,4 @@ import java.util.List;
             return produtos;
         }
          
-         public void deletar(Produto p) throws SQLException{
-                try(Connection con = new ConectaBanco().conexao()){
-                    PreparedStatement stm = con.prepareStatement("DELETE FROM PRODUTO WHERE ID_PROD = ?");
-                    stm.setInt(1,p.getId());
-                    stm.execute();
-
-                    Integer linhas = stm.getUpdateCount();
-                    System.out.println("Quantidade de linhas Afetadas: " +linhas);
-        
-                }
-         }
-
 }

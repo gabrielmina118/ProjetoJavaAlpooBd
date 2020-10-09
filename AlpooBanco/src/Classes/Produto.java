@@ -60,11 +60,11 @@ package Classes;
             this.id = id;
         }
 
-    @Override
-    public String toString() {
-        return String.format("O Produto é: %d - %d - %f - %s - %s - %f - %d",
-                                this.id,this.id_dist,this.preco_venda,this.descricao,this.data_validade,this.preco_custo,this.estoque);
-    }
+        @Override
+        public String toString() {
+            return String.format("O Produto é: %d - %d - %f - %s - %s - %f - %d",
+                                    this.id,this.id_dist,this.preco_venda,this.descricao,this.data_validade,this.preco_custo,this.estoque);
+        }
         
         
         

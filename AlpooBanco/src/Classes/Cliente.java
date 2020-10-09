@@ -27,8 +27,13 @@ package Classes;
                 this.telefone = telefone;
                 this.email = email;
             }
-
-
+            public Cliente(Integer Id){
+                this.id = id;
+            }
+            public Integer getId() {
+                return id;
+            }
+         
             public String getNome() {
                 return nome;
             }
@@ -49,7 +54,7 @@ package Classes;
                 return email;
             }
             // Setando o id criado no Bd para a classe cliente
-            public void setId(Integer id){
+            public void setId_cliente(Integer id){
                 this.id = id;
             }
             

@@ -1,7 +1,6 @@
 package DAO;
 
 import BancoDados.ConectaBanco;
-import Classes.Cliente;
 import Classes.Distribuidor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,10 +20,10 @@ public class DistribuidorDAO {
         }
         
         public void inserir(Distribuidor d) throws SQLException{
-            try(Connection con = new ConectaBanco().conexao()){
+            try(Connection conecta = new ConectaBanco().conexao()){
                 
                 String sql = "INSERT INTO DISTRIBUIDORES(nome_fantasia,razao_social,telefone,email) VALUES(?,?,?,?)";
-                try(PreparedStatement pstm = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS)){
+                try(PreparedStatement pstm = conecta.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS)){
                     pstm.setString(1,d.getNome_fantasia());
                     pstm.setString(2,d.getRazao_social());
                     pstm.setString(3,d.getTelefone());
@@ -41,6 +40,7 @@ public class DistribuidorDAO {
             }
         }
          public List<Distribuidor> listar() throws SQLException{
+            
             //Criar list de distribuidores
             List<Distribuidor> distribuidores =  new ArrayList<>();
             
