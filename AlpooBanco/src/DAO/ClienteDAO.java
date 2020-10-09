@@ -78,7 +78,7 @@ import java.util.List;
             try(Connection conecta = new ConectaBanco().conexao()){
                 
                 String sql = "DELETE FROM CLIENTE WHERE ID_CLIENTE = ?";
-                try(PreparedStatement pstm = conecta.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS)){
+                try(PreparedStatement pstm = conecta.prepareStatement(sql)){
                 
                     pstm.setInt(1, c.getId());
                     pstm.execute();

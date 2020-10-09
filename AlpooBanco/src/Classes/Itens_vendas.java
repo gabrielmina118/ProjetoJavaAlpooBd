@@ -36,5 +36,6 @@ package Classes;
                                 this.id_prod,this.id_venda,this.quantidade,this.sub_total);
         }
 
+
         
 }

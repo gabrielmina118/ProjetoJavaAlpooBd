@@ -20,6 +20,8 @@ import java.util.List;
                 
                 d.inserir(dist); // Inserindo novo Objeto na Lista
                 
+                d.deletar(dist); // Deletar objeto
+                
                 // Listando o ArrayList
                 for(Distribuidor di :distribuidores){
                     System.out.println(di);

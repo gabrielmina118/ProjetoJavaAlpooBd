@@ -25,6 +25,10 @@ package Classes;
         }
         
 
+        public Integer getId(){
+            return this.id;
+        }
+        
         public String getNome_fantasia() {
             return nome_fantasia;
         }

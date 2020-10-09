@@ -13,14 +13,16 @@ import java.util.List;
         
        //Inserindo cliente novo
         Cliente maria = new Cliente("Maria do carmo","1980-06-20","Rua do carmo","987456652","maria@carmo");
-
+        
         //Conexao com o banco
         try(Connection con = new ConectaBanco().conexao()){
             ClienteDAO cli = new ClienteDAO(con); // crio objeto clienteDAO
             List<Cliente> clientes = cli.listar(); // Passando a funcao listar para "clientes"
             
             //Adicionando Novo cliente
-            //cli.inserir(maria);
+            cli.inserir(maria);
+            
+            // Removendo Maria
             cli.deletar(maria);
             
             for(Cliente cl : clientes){

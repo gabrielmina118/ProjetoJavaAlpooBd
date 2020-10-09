@@ -21,6 +21,7 @@ import java.util.List;
                 //Inserindo novo item no arrayList
                 item.inserir(itens);
                 
+                
                 for(Itens_vendas i : itensVendas){
                     System.out.println(i);
                 }

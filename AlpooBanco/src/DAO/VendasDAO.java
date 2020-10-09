@@ -69,4 +69,18 @@ import java.util.List;
             }
             return vendas;
         }
+              public void deletar(Vendas c) throws SQLException{
+            try(Connection conecta = new ConectaBanco().conexao()){
+                
+                String sql = "DELETE FROM VENDAS WHERE ID_CLIENTE = ?";
+                try(PreparedStatement pstm = conecta.prepareStatement(sql)){
+                
+                    pstm.setInt(1, c.getId_vendas());
+                    pstm.execute();
+                    
+                    
+                    System.out.println("Deletado com sucesso");
+                }
+            }
+        }
 }

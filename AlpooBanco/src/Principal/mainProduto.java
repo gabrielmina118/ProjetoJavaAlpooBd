@@ -18,8 +18,10 @@ import java.util.List;
                 List<Produto> produtos = p.listar();
                
                 //Inserindo novo produto
-                //p.inserir(prod);
-               
+                p.inserir(prod);
+                
+               //Deletando produto
+                p.deletar(prod);
                 
                 for(Produto pr:produtos){
                     System.out.println(pr);

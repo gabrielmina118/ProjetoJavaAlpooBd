@@ -68,6 +68,21 @@ public class DistribuidorDAO {
             }
             return distribuidores;
         }
+         
+              public void deletar(Distribuidor d) throws SQLException{
+            try(Connection conecta = new ConectaBanco().conexao()){
+                
+                String sql = "DELETE FROM DISTRIBUIDOR WHERE ID_CLIENTE = ?";
+                try(PreparedStatement pstm = conecta.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS)){
+                
+                    pstm.setInt(1, d.getId());
+                    pstm.execute();
+                    
+                    
+                    System.out.println("Deletado com sucesso");
+                }
+            }
+        }
         
         
 

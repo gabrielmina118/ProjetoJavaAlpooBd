@@ -19,6 +19,8 @@ import java.util.List;
                 
                 vendas.inserir(vend); // Inserindo no ArrayList o objeto
                 
+                vendas.deletar(vend); // deletando venda
+                
                 // Listando o List de vendas
                 for(Vendas v : ve){
                     System.out.println(v);
